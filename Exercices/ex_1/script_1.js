@@ -1,6 +1,26 @@
 $(function(){
-    $("#content").css("background-color","gray");
-    $("h1,h2").css("color","red");
-    $("p").css("color","black");
-    $(".anecdote+ p, .anecdote").css("color","white");
+    var test = false;
+
+
+
+    $("img").on('click',function (){
+
+        test = !test;
+        if (!test) {
+            $("#content").removeClass("light");
+            animationFade();
+        } else {
+
+            $("#content").addClass("light");
+            animationFade();
+        }
+    })
 });
+
+function animationFade() {
+
+    $("#content").css("opacity","0");
+    $("#content").fadeTo("400","1");
+}
+
+

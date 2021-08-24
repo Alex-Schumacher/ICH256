@@ -1,0 +1,41 @@
+ul{
+    text-align: center;
+    list-style: none;
+}
+li {
+    border-radius:50px;
+
+}
+#uno{
+    background-color: white;
+    border-radius: 20px;
+}
+#duo{
+    background-color: mediumspringgreen;
+}
+#tres{
+    background-color: yellow;
+}
+#cuatro{
+    background-color: hotpink;
+}
+h1 {
+    font-family: 'Rampart One', cursive;
+
+}
+
+h2 {
+    font-family: 'Klee One', cursive;
+}
+body {
+
+background-color: deepskyblue;
+    /*background: #a8ff78;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to left, #78ffd6, #a8ff78);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to left, #78ffd6, #a8ff78); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+    /*transition: background 0.5s ease-in;*/
+}
+
+img{ position: absolute;
+z-index: -1;
+}
