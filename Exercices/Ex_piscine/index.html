@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Piscine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+   <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <!--    jquery-->
+    <script src="../../jQuery/jquery-3.6.0.js"></script>
+    <!--    bootstrap-->
+
+    <!--    jquery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css.css" media="all" />
+
+
+</head>
+
+<body>
+<div id="content">
+<div class="container">
+    <div class="row">
+        <div class="header">
+            <h1></h1>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 style="text-align: center" >Inscription - Piscine Octupus Diving</h2>
+        </div>
+        <div class="panel-body">
+            <form id="inscription_form" action="check.php" method="post">
+
+                <!-- Nom -->
+                <div    class="form-group row"  id="dateRow">
+                    <input type="date" id="date" >
+                    <label for="date" id="perso_inscri" >x/15</label>
+
+                </div>
+                <div class="form-group row">
+                    <label for="nom_per" class="col-sm-2 col-form-label">Nom : </label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="nom_per" name="nom_per" placeholder="votre nom">
+                    </div>
+                </div>
+
+                <!-- Prénom -->
+                <div class="form-group row">
+                    <label for="prenom_per" class="col-sm-2 col-form-label">Prénom : </label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="prenom_per" name="prenom_per" placeholder="votre prénom">
+                    </div>
+                </div>
+
+                <!-- Téléphone -->
+                <div class="form-group row">
+                    <label for="phone" class="col-sm-2 col-form-label">Numéro : </label>
+                    <div class="col-sm-5">
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="votre numéro">
+                    </div>
+                </div>
+
+                <!-- E-mail -->
+                <div class="form-group row">
+                    <label for="email_per" class="col-sm-2 col-form-label">E-mail : </label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="email_per" name="email_per" placeholder="votre e-mail">
+                    </div>
+                </div>
+
+                <!-- Type de personne -->
+                <div class="form-group row">
+                    <input type="radio" id="plongeur" name="type" checked> Plongeur
+                    <label for="plongeur" class="col-sm-2 col-form-label"></label>
+
+                <div class="form-group row" >
+                    </div> <input type="radio" id="apna" name="type"> Apnéiste / Nageur
+                    <label for="apna" class="col-sm-2 col-form-label"></label>
+                </div>
+
+                <hr>
+
+                <!-- Ecole et club -->
+                <div id="check" >
+                <div class="form-group row">
+                    <input type="radio" id="club_et_ecole" name="club" > Club / école
+                    <label for="club_et_ecole" class="col-sm-2 col-form-label"></label>
+                </div>
+                <div class="form-group row" id="none">
+                    <label for="club" class="col-sm-2 col-form-label">Nom du club: </label>
+                    <div class="col-sm-5">
+                        <input type="text" name="club" id="club" class="form-control" >
+                    </div>
+                </div>
+                    <div class="form-group row" >
+
+
+                <input type="radio" id="priv" name="club"> privée
+
+                    <label for="apna" class="col-sm-2 col-form-label"></label>
+                </div>
+
+
+                <hr>
+
+                <div class="form-group row">
+                    <input type="checkbox" id="moniteur_box" name="moniteur"> Moniteur avec élèves
+                    <label for="moniteur" class="col-sm-2 col-form-label"></label>
+                </div>
+
+                <div class="form-group row" id="none2">
+                    <label for="moniteur" class="col-sm-2 col-form-label">Nombre d'élèves : </label>
+                    <div class="col-sm-1">
+                        <input type="number" name="moniteur" id="moniteur" class="form-control"  max="15">
+                    </div>
+                </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-10"></div>
+                    <button type="submit" value="submit" class="btn btn-primary"  >S'inscrire</button>
+                    <button type="button" class=" btn btn-warning">Annuler</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="panel-footer">
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
