@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://moodle.ceff.ch/pluginfile.php/22406/mod_page/content/3/index.html -->
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cidisi - Games</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- test -->
+
+
+    <!--script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script-->
+
+    <script src="./plonge.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div id="loading">
+            <img id="loading_img" src="./Octopus_files/loading.gif">
+        </div>
+        <!-- Zone de notification -->
+        
+        <div class="col-md-12">
+    <div class="panel panel-primary">
+
+        <div class="panel-heading">
+            <h3>Réservations à venir</h3>
+        </div>
+
+        <div class="panel-body">
+
+            <table class="table table-bordered table-striped table-condensed">
+                            <tbody><tr>
+                    <td>2019-09-07</td>
+                    <td>Test</td>
+                    <td>Junod Michel</td>
+                    <td>3</td>
+                    <td>
+                        <a href="https://moodle.ceff.ch/pluginfile.php/22406/mod_page/content/3/details.php?id_res=5"><button class="btn btn-primary detail_ins" id_res="5">Détails</button></a>
+                    </td>
+                    <td>
+                                                        <button class="btn btn-primary add_ins" data-toggle="modal" id_res="5" type="button" class="btn btn-info btn-lg"data-target="#myModal">S'inscrire</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <!--div id="reussite" class="alert alert-success alert-dismissible" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <span class="message"></span>
+                                        </div-->
+
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <br>
+                                        <div id="reussite" class="alert alert-success" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <span class="message"></span></div>
+                                        <h4 class="modal-title">Inscription</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="panel-body">
+                                            <form id="inscription_form" action=" http://www.hirtzel.ch/pot/exemples/form/view/index.php" method="post">
+                                                <!--nom-->
+                                                <div class="form-group row">
+                                                    <label for="nom_per" class="col-sm-2 col-form-label">
+                                                        Nom
+                                                    </label>
+                                                    <div class="col-sm-10">
+                                                        <input  type="text" class="form-control" id="nom_per" name="nom_per" placeholder="votre_nom">
+                                                    </div>
+                                                </div>
+                                                <!--prénom-->
+                                                <div class="form-group row">
+                                                    <label for="prenom_per" class="col-sm-2 col-form-label">
+                                                        Prénom
+                                                    </label>
+                                                    <div class="col-sm-10">
+                                                        <input  type="text" class="form-control" id="prenom_per" name="prenom_per" placeholder="votre prénom">
+                                                    </div>
+                                                </div>
+                                                <!--Téléphone-->
+                                                <div class="form-group row">
+                                                    <label for="tel_per" class="col-sm-2 col-form-label">
+                                                        Téléphone
+                                                    </label>
+                                                    <div class="col-sm-10">
+                                                        <input  type="text" class="form-control" id="tel_per" name="tel_per" placeholder="Votre numéro de téléphone">
+                                                    </div>
+                                                </div>
+                                                <!--email-->
+                                                <div class="form-group row">
+                                                    <label for="email_per" class="col-sm-2 col-form-label">
+                                                        E-mail
+                                                    </label>
+                                                    <div class="col-sm-10">
+                                                        <input  type="text" class="form-control" id="email_per" name="email_per" placeholder="votre aresse e-mail">
+                                                    </div>
+                                                </div>
+                                                <!--Activité-->
+                                                <div class="form-group row">
+                                                    <label for="radio" class="col-sm-2 col-form-label">
+                                                        Activité
+                                                    </label>
+                                                    <div class="col-sm-10">
+                                                        <!--input  type="radio"  id="activite" name="activite" -->
+                                                        <div>
+                                                            <input type="radio" id="radio" name="radio" value="plongeur">
+                                                            <label for="radio">Plongeur</label>
+                                                        </div>
+
+                                                        <div>
+                                                            <input type="radio" id=radio" name="radio" value="apnee_nage">
+                                                            <label for="radio">Apnée/nage</label>
+
+                                                        </div>
+                                                        <label id="radio-error" class="error" for="radio"></label>
+
+                                                    </div>
+                                                </div>
+                                                <!--moniteur/élèves-->
+                                                <div class="form-group row">
+                                                    <label for="moniteur" class="col-sm-2 col-form-label">
+                                                       Moniteur
+                                                    </label>
+                                                    <div class="col-sm-10">
+                                                    <div class="col-sm-5">
+                                                        <input value="1" type="checkbox"  id="moniteur" name="moniteur">
+                                                    </div>
+                                                    <label for="eleve" id="eleve_lbl"class="col-sm-2 col-form-label">
+                                                        Nombre d'élèves
+                                                    </label>
+                                                        <!--input  type="combo"  id="club" name="club"-->
+                                                        <div class="col-sm-5">
+                                                        <select name="eleve" id="eleve">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                            <option value="13">13</option>
+                                                            <option value="14">14</option>
+                                                            <option selected value="0">-</option>
+                                                        </select>
+
+
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <!--Club-->
+                                                <div class="form-group row">
+                                                    <label for="club" class="col-sm-2 col-form-label">
+                                                        Club/école
+                                                    </label>
+                                                    <div class="col-sm-10">
+
+                                                        <div class="col-sm-5">
+                                                            <select name="club" id="club">
+                                                                <option value="octopus">Octopus</option>
+                                                                <option value="about_divin">About Divin</option>
+                                                                <option value="autre">Autre</option>
+                                                                <option selected value="aucun">Aucun</option>
+                                                            </select>
+                                                        </div>
+                                                        <label for="autre_club" id="autre_club_lbl" class="col-sm-2 col-form-label">
+                                                            Autre Club
+                                                        </label>
+                                                        <div class="col-sm-5">
+                                                            <input  type="text"  id="autre_club" name="autre_club" placeholder="Le nom de votre club">
+                                                        </div>
+
+                                                    </div>
+
+
+                                                <!--boutons-->
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10"></div>
+
+                                                    <div class="col-sm-2">
+                                                        <button class="btn btn-primary">Envoyer</button>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-2">
+                                                        <button id="test" class="btn btn-warning">Dans les autres pays européens, les opérations</br>
+                                                            étaient plus complexes puisque les Juifs n’y avaient pas</br>
+                                                            été isolés au préalable du reste de la population, dont en</br>
+                                                            règle générale, ils ne se distinguaient d’aucune manière.</br>
+                                                            Il fallait donc, pour pouvoir les arrêter, les dépister</br>
+                                                            auparavant et les recenser, pays par pays, parfois avec</br>
+                                                            le concours des polices locales. Une vaste organisation,</br>
+                                                            dirigée par le colonel S.S. Adolf Eichmann fut créée à</br>
+                                                            cette fin. De tous les pays occupés, de France, de</br>
+                                                            Norvège ou de Grèce, les Juifs étaient ensuite déportés</br>
+                                                            au camp d’Auschwitz (Pologne occidentale), le plus</br>
+                                                            vaste des camps de la mort. Ce camps était aussi un</br>
+                                                            camp de travail dans lequel les déportés valides</br>
+                                                            devaient d’abord travailler, en des conditions</br>
+                                                            inhumaines et jusqu’à ce que la mort s’ensuive.</br>
+                                                            Dans son jugement, le Tribunal international de</br>
+                                                            Nuremberg a donné une description circonstanciée du</br>
+                                                            camp d’Auschwitz :</br>
+                                                            « En ce qui concerne Auschwitz, le Tribunal a</br>
+                                                            entendu le témoignage de Hoess, qui en fut le</br>
+                                                            Commandant, du 1er mai 1940 au 1er décembre 1943. À</br>
+                                                            son avis, dans ce seul camp et pendant cette période,</br>
+                                                            15
+                                                            deux millions cinq cent mille personnes furent</br>
+                                                            exterminées et cinq cent mille autres périrent de</br>
+                                                            maladie ou de faim. Hoess a décrit la manière dont</br>
+                                                            étaient choisis ceux qui allaient être exterminés :</br>
+                                                            « Nous avions à Auschwitz deux médecins S.S. de</br>
+                                                            service, dont la mission consistait à procéder à</br>
+                                                            l’examen physique des prisonniers dès l’arrivée des</br>
+                                                            convois. Les prisonniers devaient défiler devant l’un</br>
+                                                            des médecins qui prenait sa décision immédiatement, à</br>
+                                                            mesure qu’ils passaient. Ceux qui étaient capables de</br>
+                                                            travailler étaient envoyés au camp. Les autres étaient</br>
+                                                            immédiatement envoyés aux installations</br>
+                                                            d’extermination. Dans tous les cas, les enfants en bas</br>
+                                                            âge étaient tués, car leur âge les rendait inaptes au</br>
+                                                            travail (...). Très souvent, des femmes cachaient leurs</br>
+                                                            enfants sous leur vêtement mais évidemment, lorsque</br>
+                                                            nous les trouvions, ils étaient expédiés vers les lieux</br>
+                                                            d’extermination. »</br>
+                                                            Quant aux exterminations mêmes, Hoess les</br>
+                                                            décrivait en ces termes :</br>
+                                                            « Il nous fallait de trois à quinze minutes pour tuer</br>
+                                                            les victimes dans la chambre de mort, le délai variant</br>
+                                                            suivant les conditions atmosphériques. Nous savions</br>
+                                                            qu’elles étaient mortes quand elles cessaient de crier.</br>
+                                                            En général, nous attendions une demi-heure avant</br>
+                                                            d’ouvrir les portes et d’enlever les cadavres que nos</br>
+                                                            16
+                                                            commandos spéciaux dépouillaient alors de leurs</br>
+                                                            bagues et de leurs dents en or. »</br>
+                                                            Les coups, le régime de famine, les tortures et les</br>
+                                                            exécutions étaient la règle. Les détenus étaient soumis à</br>
+                                                            des expériences cruelles. Dans le camp de Dachau, en</br>
+                                                            août 1942, certains furent immergés dans l’eau froide</br>
+                                                            jusqu’à ce que la température de leur corps s’abaissât à</br>
+                                                            28° et que la mort survint. On effectuait également</br>
+                                                            différentes expériences concernant les hautes altitudes,</br>
+                                                            la durée pendant laquelle des êtres humains peuvent</br>
+                                                            vivre dans l’eau glacée, l’effet des balles empoisonnées</br>
+                                                            et de certaines maladies contagieuses. Enfin, on</br>
+                                                            expérimenta la stérilisation d’hommes et de femmes par</br>
+                                                            les rayons X et par d’autres méthodes.</br>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                </div>
+
+                                            </form>
+
+                                        </div>
+                                        <!-- là -->
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                                </div>
+                                </div>
+
+                    </td>
+                </tr>
+
+                            <tr>
+                    <td>2019-09-17</td>
+                    <td></td>
+                    <td>Junod Michel</td>
+                    <td>0</td>
+                    <td>
+                        <a href="https://moodle.ceff.ch/pluginfile.php/22406/mod_page/content/3/details.php?id_res=2"><button class="btn btn-primary detail_ins" id_res="2">Détails</button></a>
+                    </td>
+                    <td>
+                                                        <button class="btn btn-primary add_ins" data-toggle="modal" data-target="#add_ins_mod" id_res="2" target="#myModal">S'inscrire</button>
+                                
+                    </td>
+                </tr>
+
+                            <tr>
+                    <td>2019-09-28</td>
+                    <td></td>
+                    <td>Junod Michel</td>
+                    <td>3</td>
+                    <td>
+                        <a href="https://moodle.ceff.ch/pluginfile.php/22406/mod_page/content/3/details.php?id_res=7"><button class="btn btn-primary detail_ins" id_res="7">Détails</button></a>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary add_ins" data-toggle="modal" data-target="#add_ins_mod" id_res="7" target="#myModal">S'inscrire</button>
+                    </td>
+                </tr>
+
+                            <tr>
+                    <td>2019-10-13</td>
+                    <td>Entrainement</td>
+                    <td>Junod Michel</td>
+                    <td>15</td>
+                    <td>
+                        <a href="https://moodle.ceff.ch/pluginfile.php/22406/mod_page/content/3/details.php?id_res=6"><button class="btn btn-primary detail_ins" id_res="6">Détails</button></a>
+                    </td>
+                    <td>
+                        Complet
+                    </td>
+                </tr>
+
+                        </tbody></table>
+        </div>
+
+        <div class="panel-footer">
+
+        </div>
+
+    </div>
+</div></div></body></html>

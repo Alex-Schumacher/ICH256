@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Jquery -->
+    <script src="../../jquery/jquery-3.6.0.js"></script>
+
+    <!-- JQuery Validate-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+    <!--JS-->
+    <script src="./js/Formulaire.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/css.css">
+
+    <meta charset="UTF-8">
+    <title>Exercice 0</title>
+<!--        <style>
+            div{
+                border:1px solid black;
+            }
+        </style>-->
+</head>
+<body>
+<div class ="container">
+
+    <div class="panel panel-primary col-xl-2<">
+        <div class="panel-heading">
+            <h2>Inscription - Piscine Octopus Diving</h2>
+        </div>
+
+        <div class="panel-body"  >
+            <form id="inscription_form" action="https://www.hirtzel.ch/pot/exemples/form/view/index.php" method="post">
+
+                <!--Nom-->
+                <div class="form-group row">
+                    <label for="nom_per" class="col-sm-2 col-form-label">Nom</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="nom_per" name="nom_per" placeholder="votre nom">
+                    </div>
+                </div>
+
+                <!--Prénom-->
+                <div class="form-group row">
+                    <label for="prenom_per" class="col-sm-2 col-form-label">Prénom</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="prenom_per" name="prenom_per" placeholder="votre prénom">
+                    </div>
+                </div>
+
+                <!--E-mail-->
+                <div class="form-group row">
+                    <label for="email_per" class="col-sm-2 col-form-label">E-mail</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="email_per" name="email_per" placeholder="votre email">
+                    </div>
+                </div>
+
+                <!--Téléphone-->
+                <div class="form-group row">
+                    <label for="telephone_per" class="col-sm-2 col-form-label">Téléphone</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="telephone_per" name="telephone" placeholder="+41 12 345 67 89">
+                    </div>
+                </div>
+
+                <!--Activité-->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Activité</label>
+                    <div class="col-sm-2">
+                        <input type="radio" id="plongeur" value="plongeur" name="activite_per" checked> Plongeur
+                    </div>
+                    <div >
+                        <input type="radio" id="apne/nageur" value="apneiste/nageur" name="activite_per"> Apnéiste / Nageur
+                    </div>
+                </div>
+
+                <!--Moniteur-->
+                <div class="form-group row">
+                    <label  class="col-sm-2 col-form-label">Moniteur</label>
+                    <div class="col-sm-1">
+                        <input type="checkbox" id="moniteur" name="moniteur_per">
+                    </div>
+                    <div class="moniteuroui">
+                        <div class="col-sm-3">
+                            <input class="col-sm-7" type="number" id="nombre" name="nbeleve_per" placeholder="nb élèves">
+                        </div>
+                        <div class="col-sm-4 erreureleves">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Ecole et club-->
+                <div id="check">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Affiliation</label>
+                        <div>
+                            <div class="col-sm-2">
+                                <input type="radio" value="prive" name="affiliation" checked> Privé
+                            </div>
+                            <div>
+                                <input type="radio" value="club" name="affiliation"> Membre d'un club
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2">
+                            <select class="form-control combobox" name="combobox_per">
+                                <option selected disabled>Séléction</option>
+                                <option value="1">Octopus</option>
+                                <option value="2">About Daving</option>
+                                <option value="3" class="combobox3">Autre</option>
+                            </select>
+                        </div>
+                        <div class="nomclub">
+                            <div class="col-sm-4">
+                                <input  class="col-sm-7" type="text" id="autreclub" name="autreclub_per" placeholder="Nom du club" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Button-->
+                <div class="form-group row">
+                    <div class="col-sm-offset-8 col-sm-2">
+                        <button type="submit " class="form-control btn btn-primary submit" id="submit">S'inscrire</button>
+                    </div>
+                    <div class="col-sm-2 ">
+                        <button type="reset" class="form-control btn btn-warning " id="reset">Réinitialiser</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="panel-footer">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

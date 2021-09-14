@@ -1,0 +1,25 @@
+.moniteuroui{
+    display : none;
+}
+
+.combobox{
+    display: none;
+}
+
+.panel-heading{
+    text-align: center;
+}
+
+#autreclub{
+    display: none;
+}
+
+label.error{
+    color:red;
+    font-size:12px;
+}
+/*.panel{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}*/
